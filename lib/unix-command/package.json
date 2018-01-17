@@ -1,0 +1,7 @@
+{
+  "name": "unixCommand",
+  "description": "",
+  "private": true,
+  "version": "1.0.0",
+  "main": "command.js"
+}

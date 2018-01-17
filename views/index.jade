@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  
+  form.search(method="post", action="/translate")
+    input(placeholder='UNIX command', name="search")
+    input(type='submit')
+
+
+  h1 H!
+
+  - if (search)
+    p You searched: #{search}
+
+  - if (translation)
+    strong It means
+    p= translation
