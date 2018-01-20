@@ -19,6 +19,15 @@ describe('translate', function() {
         
     });
 
+    it('should split redirect commands', function(done){
+        unixCommand.translate('echo "HI" > file.txt').then( response => {
+
+            expect(response).to.equal('write arguments to the standard output "HI" redirect output to a file file.txt');
+        })
+        .then(done, done);
+        
+    });
+
     // it('should split redirect commands', function(done){
     //     unixCommand.translate('echo "HI" >> file.txt').then( response => {
 
