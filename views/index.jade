@@ -3,15 +3,11 @@ extends layout
 block content
   
   form.search(method="post", action="/translate")
-    input(placeholder='UNIX command', name="search")
-    input(type='submit')
+    input(placeholder='UNIX command', name="search" value=search)
+    input(type='submit', value="Translate")
 
-
-  h1 H!
-
-  - if (search)
-    p You searched: #{search}
 
   - if (translation)
-    strong It means
-    p= translation
+    h1 =
+
+    p=translation
