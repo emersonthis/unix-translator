@@ -28,14 +28,14 @@ describe('translate', function() {
         
     });
 
-    // it('should split redirect commands', function(done){
-    //     unixCommand.translate('echo "HI" >> file.txt').then( response => {
+    it('should split appended commands', function(done){
+        unixCommand.translate('echo "HI" >> file.txt').then( response => {
 
-    //         expect(response).to.equal('write arguments to the standard output append output to a file file.txt');
-    //     })
-    //     .then(done, done);
+            expect(response).to.equal('write arguments to the standard output "HI" append output to a file: file.txt');
+        })
+        .then(done, done);
         
-    // });
+    });
 
     // it('should describe a single command with options', function(done){
     //     unixCommand.translate('cat -n', summary => {
