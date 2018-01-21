@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "mocha --exit",
-    "prestart": "apt-get update && apt-get install man"
+    "test": "mocha --exit"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
