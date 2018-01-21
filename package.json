@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node ./bin/www",
     "test": "mocha --exit",
-    "prestart": "npm install"
+    "prestart": "apt-get install man"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
