@@ -10,6 +10,13 @@ describe('translate', function() {
         .then(() => done(), done);
     });
 
+    it('should describe a single command with options', function(done){
+        unixCommand.translate('cat -n').then( summary => {
+            expect(summary).to.equal('concatenate and print files [with options -n]');
+        })
+        .then(done, done);
+    });
+
     it('should split piped commands', function(done){
         unixCommand.translate('echo "HI" | cat').then( response => {
 
@@ -37,12 +44,6 @@ describe('translate', function() {
         
     });
 
-    // it('should describe a single command with options', function(done){
-    //     unixCommand.translate('cat -n', summary => {
-    //         expect(summary).to.equal('concatenate and print files, Number the output lines, starting at 1.');
-    //         done();
-    //     });
-    // });
 
 
 
